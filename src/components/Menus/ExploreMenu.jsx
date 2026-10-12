@@ -1,5 +1,16 @@
-import { menu_list } from "../../assets/frontend_assets/assets";
+import { menu_list } from "../../assets/frontend_assets/menu";
 import { Button } from "../ui/button";
+
+const categoryLabels = {
+  Salad: "Salades",
+  Rolls: "Rouleaux",
+  Deserts: "Desserts",
+  Sandwich: "Sandwich",
+  Cake: "Gâteaux",
+  "Pure Veg": "100 % Végétal",
+  Pasta: "Pâtes",
+  Noodles: "Nouilles",
+};
 
 function ExploreMenu({ category, setCategory }) {
   return (
@@ -12,14 +23,14 @@ function ExploreMenu({ category, setCategory }) {
         id="explore-menu-title"
         className="text-3xl font-bold tracking-tight sm:text-4xl"
       >
-        Explore our menu
+        Explorez notre menu
       </h2>
 
       <p className="max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
-        Discover our selection of delicious dishes.
+        Découvrez notre sélection de délicieux plats.
       </p>
 
-      <nav aria-label="Food categories" className="w-full overflow-x-auto pb-3">
+      <nav aria-label="Catégories de plats" className="w-full overflow-x-auto pb-3">
         <div className="flex min-w-max items-center gap-3">
           <Button
             type="button"
@@ -28,7 +39,7 @@ function ExploreMenu({ category, setCategory }) {
             aria-pressed={category === "All"}
             className="shrink-0 rounded-full px-5 cursor-pointer"
           >
-            All
+            Tout
           </Button>
 
           {menu_list.map((item) => (
@@ -40,7 +51,7 @@ function ExploreMenu({ category, setCategory }) {
               aria-pressed={category === item.menu_name}
               className="shrink-0 rounded-full px-5 cursor-pointer"
             >
-              {item.menu_name}
+{categoryLabels[item.menu_name] || item.menu_name}
             </Button>
           ))}
         </div>
