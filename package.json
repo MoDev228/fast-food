@@ -17,6 +17,7 @@
     "@hugeicons/react": "^1.1.10",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
+    "motion": "^14.1.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "shadcn": "^4.21.4",
