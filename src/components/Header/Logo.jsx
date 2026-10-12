@@ -1,4 +1,4 @@
-import { assets } from "@/assets/admin_assets/assets";
+import { assets } from "@/assets/frontend_assets/images";
 
 function Logo() {
   return (
