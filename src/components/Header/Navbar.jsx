@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 function Navbar() {
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("Accueil");
 
-  const links = [
-    { label: "Home", href: "#home" },
+const links = [
+    { label: "Accueil", href: "#home" },
     { label: "Menus", href: "#explore-menu" },
-    { label: "Mobile App", href: "#mobile-app" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "Application", href: "#mobile-app" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
